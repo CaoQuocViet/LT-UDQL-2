@@ -1,0 +1,1 @@
+Có viết document template bằng nhiều cách
