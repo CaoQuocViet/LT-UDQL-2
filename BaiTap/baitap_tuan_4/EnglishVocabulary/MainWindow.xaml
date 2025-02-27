@@ -6,39 +6,116 @@
     xmlns:local="using:EnglishVocabulary"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:labs="using:CommunityToolkit.Labs.WinUI"
     mc:Ignorable="d"
     Title="English Vocabulary">
 
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF8BC6EC" Offset="0"/>
+                <GradientStop Color="#FF9599E2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" 
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"
-                    Spacing="20">
-            <Image x:Name="vocabularyImage"
-                   Width="300"
-                   Height="300"
-                   Stretch="Uniform"/>
-            <StackPanel Orientation="Vertical" Spacing="8">
-                <TextBlock x:Name="wordTextBlock"
-                          FontSize="24"
-                          HorizontalAlignment="Center"/>
-                <TextBlock x:Name="vietnameseTextBlock"
-                          FontSize="20"
-                          HorizontalAlignment="Center"
-                          Foreground="Gray"/>
-            </StackPanel>
-        </StackPanel>
+        <Border Grid.Row="0" 
+                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                CornerRadius="12"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                Margin="20"
+                Translation="0,0,32">
+            <Border.Shadow>
+                <ThemeShadow />
+            </Border.Shadow>
 
+            <StackPanel HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                        Spacing="24">
+                <!-- Image Card -->
+                <Border Width="320" 
+                        Height="320"
+                        CornerRadius="8"
+                        Background="White"
+                        BorderThickness="1"
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                        Translation="0,0,8">
+                    <Border.Shadow>
+                        <ThemeShadow />
+                    </Border.Shadow>
+                    
+                    <Image x:Name="vocabularyImage"
+                           Stretch="UniformToFill"/>
+                </Border>
+
+                <!-- Text Content -->
+                <StackPanel Orientation="Vertical" 
+                          Spacing="8"
+                          Padding="20,0">
+                    <TextBlock x:Name="wordTextBlock"
+                              FontSize="32"
+                              FontWeight="SemiBold"
+                              HorizontalAlignment="Center">
+                        <TextBlock.Transitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </TextBlock.Transitions>
+                    </TextBlock>
+                    
+                    <TextBlock x:Name="vietnameseTextBlock"
+                              FontSize="24"
+                              HorizontalAlignment="Center"
+                              Foreground="{ThemeResource TextFillColorSecondaryBrush}">
+                        <TextBlock.Transitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </TextBlock.Transitions>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Next Button -->
         <Button x:Name="nextButton"
                 Grid.Row="1"
                 Content="Next Word"
                 HorizontalAlignment="Center"
-                Margin="0,20"
-                Click="NextButton_Click"/>
+                Margin="0,20,0,40"
+                Click="NextButton_Click"
+                Style="{StaticResource AccentButtonStyle}">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+                        <Setter Property="Padding" Value="24,12"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </ResourceDictionary>
+            </Button.Resources>
+            <Button.Transitions>
+                <TransitionCollection>
+                    <PopupThemeTransition/>
+                </TransitionCollection>
+            </Button.Transitions>
+            <ToolTipService.ToolTip>
+                <ToolTip Content="Click to see next word"/>
+            </ToolTipService.ToolTip>
+        </Button>
+
+        <!-- Teaching Tip -->
+        <TeachingTip x:Name="welcomeTip"
+                     Title="Welcome to English Vocabulary!"
+                     Subtitle="Click 'Next Word' to start learning new words"
+                     PreferredPlacement="Bottom"
+                     IsLightDismissEnabled="True"
+                     Target="{x:Bind nextButton}"/>
     </Grid>
 </Window>
