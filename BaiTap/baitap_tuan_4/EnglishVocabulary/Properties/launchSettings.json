@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EnglishVocabulary (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "EnglishVocabulary (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

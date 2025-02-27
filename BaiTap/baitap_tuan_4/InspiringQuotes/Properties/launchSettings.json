@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "InspiringQuotes (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "InspiringQuotes (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
