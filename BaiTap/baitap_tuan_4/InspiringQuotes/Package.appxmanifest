@@ -8,11 +8,11 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="a70147ef-b83a-49f7-a7db-f3ab56800417"
+    Name="90122953-c162-4d12-b2d4-eecd5891ef93"
     Publisher="CN=vietc"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="a70147ef-b83a-49f7-a7db-f3ab56800417" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="90122953-c162-4d12-b2d4-eecd5891ef93" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>InspiringQuotes</DisplayName>

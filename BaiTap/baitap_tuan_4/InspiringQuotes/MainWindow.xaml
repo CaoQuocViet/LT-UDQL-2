@@ -9,7 +9,127 @@
     mc:Ignorable="d"
     Title="InspiringQuotes">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF8BC6EC" Offset="0"/>
+                <GradientStop Color="#FF9599E2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" 
+                Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                CornerRadius="12"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                Margin="20"
+                Translation="0,0,32">
+            <Border.Shadow>
+                <ThemeShadow />
+            </Border.Shadow>
+
+            <StackPanel HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Spacing="24"
+                       Margin="20">
+                
+                <!-- Image Card -->
+                <Border CornerRadius="8"
+                        Background="White"
+                        BorderThickness="1"
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                        Translation="0,0,8">
+                    <Border.Shadow>
+                        <ThemeShadow />
+                    </Border.Shadow>
+                    
+                    <Image x:Name="QuoteImage"
+                           MaxHeight="400"
+                           Stretch="Uniform"/>
+                </Border>
+
+                <!-- Quote Content -->
+                <StackPanel Orientation="Vertical" 
+                          Spacing="8"
+                          Padding="20,0">
+                    <TextBlock x:Name="QuoteText"
+                             TextWrapping="Wrap"
+                             FontSize="24"
+                             FontWeight="SemiBold"
+                             TextAlignment="Center">
+                        <TextBlock.Transitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </TextBlock.Transitions>
+                    </TextBlock>
+                    
+                    <TextBlock x:Name="QuoteAuthor"
+                             TextAlignment="Center"
+                             FontStyle="Italic"
+                             FontSize="18"
+                             Margin="0,8,0,16">
+                        <TextBlock.Transitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </TextBlock.Transitions>
+                    </TextBlock>
+
+                    <TextBlock x:Name="TranslatedText"
+                             TextWrapping="Wrap"
+                             FontSize="20"
+                             TextAlignment="Center"
+                             Foreground="{ThemeResource TextFillColorSecondaryBrush}">
+                        <TextBlock.Transitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition/>
+                            </TransitionCollection>
+                        </TextBlock.Transitions>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Next Button -->
+        <Button x:Name="NextQuoteButton"
+                Grid.Row="1"
+                Content="Next Quote"
+                HorizontalAlignment="Center"
+                Margin="0,20,0,40"
+                Click="NextQuoteButton_Click"
+                Style="{StaticResource AccentButtonStyle}">
+            <Button.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+                        <Setter Property="Padding" Value="24,12"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </ResourceDictionary>
+            </Button.Resources>
+            <Button.Transitions>
+                <TransitionCollection>
+                    <PopupThemeTransition/>
+                </TransitionCollection>
+            </Button.Transitions>
+            <ToolTipService.ToolTip>
+                <ToolTip Content="Click to see next inspiring quote"/>
+            </ToolTipService.ToolTip>
+        </Button>
+
+        <!-- Teaching Tip -->
+        <TeachingTip x:Name="welcomeTip"
+                     Title="Welcome to Inspiring Quotes!"
+                     Subtitle="Click 'Next Quote' to get your daily inspiration"
+                     PreferredPlacement="Bottom"
+                     IsLightDismissEnabled="True"
+                     Target="{x:Bind NextQuoteButton}"/>
+    </Grid>
 </Window>
