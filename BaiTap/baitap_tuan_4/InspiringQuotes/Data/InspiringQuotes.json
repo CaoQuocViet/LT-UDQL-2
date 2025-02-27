@@ -1,0 +1,124 @@
+﻿{
+  "quotes": [
+    {
+      "id": 1,
+      "text": "Tough times don’t last. Tough people do.",
+      "author": "Robert H. Schuller",
+      "translated": "Thời gian khó khăn sẽ qua, nhưng những con người kiên cường sẽ tồn tại."
+    },
+    {
+      "id": 2,
+      "text": "Pain is temporary. Quitting lasts forever.",
+      "author": "Lance Armstrong",
+      "translated": "Cơn đau chỉ tạm thời. Bỏ cuộc mới là vĩnh viễn."
+    },
+    {
+      "id": 3,
+      "text": "A problem is a chance for you to do your best.",
+      "author": "Duke Ellington",
+      "translated": "Vấn đề là cơ hội để bạn làm hết sức mình."
+    },
+    {
+      "id": 4,
+      "text": "Motivation is what gets you started. Habit is what keeps you going.",
+      "author": "Jim Rohn",
+      "translated": "Động lực giúp bạn bắt đầu. Thói quen giúp bạn tiếp tục."
+    },
+    {
+      "id": 5,
+      "text": "A little progress each day adds up to big results.",
+      "author": "Satya Nani",
+      "translated": "Mỗi ngày tiến bộ một chút sẽ mang lại kết quả lớn."
+    },
+    {
+      "id": 6,
+      "text": "If you get tired, learn to rest, not quit.",
+      "author": "Unknown",
+      "translated": "Nếu bạn cảm thấy mệt mỏi, hãy học cách nghỉ ngơi, đừng bỏ cuộc."
+    },
+    {
+      "id": 7,
+      "text": "Success consists of getting up just one more time than you fall.",
+      "author": "Oliver Goldsmith",
+      "translated": "Thành công là việc đứng dậy thêm một lần nữa so với việc ngã."
+    },
+    {
+      "id": 8,
+      "text": "Don’t stop until you’re proud.",
+      "author": "Unknown",
+      "translated": "Đừng dừng lại cho đến khi bạn tự hào."
+    },
+    {
+      "id": 9,
+      "text": "Focus on your goal. Don’t look in any direction but ahead.",
+      "author": "Unknown",
+      "translated": "Tập trung vào mục tiêu của bạn. Đừng nhìn sang hướng khác ngoài phía trước."
+    },
+    {
+      "id": 10,
+      "text": "Courage is one step ahead of fear.",
+      "author": "Coleman Young",
+      "translated": "Lòng dũng cảm là một bước đi trước nỗi sợ hãi."
+    },
+    {
+      "id": 11,
+      "text": "Don’t wish it were easier. Wish you were better.",
+      "author": "Jim Rohn",
+      "translated": "Đừng ước rằng mọi thứ dễ dàng hơn. Hãy ước rằng bạn sẽ tốt hơn."
+    },
+    {
+      "id": 12,
+      "text": "I find that the harder I work, the more luck I seem to have.",
+      "author": "Thomas Jefferson",
+      "translated": "Tôi nhận thấy rằng càng làm việc chăm chỉ, tôi càng có nhiều may mắn."
+    },
+    {
+      "id": 13,
+      "text": "Success is the sum of small efforts repeated day-in and day-out.",
+      "author": "Robert Collier",
+      "translated": "Thành công là tổng hợp của những nỗ lực nhỏ được lặp đi lặp lại mỗi ngày."
+    },
+    {
+      "id": 14,
+      "text": "We must embrace pain and burn it as fuel for our journey.",
+      "author": "Kenji Miyazawa",
+      "translated": "Chúng ta phải ôm lấy nỗi đau và đốt cháy nó như nhiên liệu cho hành trình của mình."
+    },
+    {
+      "id": 15,
+      "text": "Believe you can and you’re halfway there.",
+      "author": "Theodore Roosevelt",
+      "translated": "Hãy tin rằng bạn có thể và bạn đã đi được nửa chặng đường."
+    },
+    {
+      "id": 16,
+      "text": "Difficult roads always lead to beautiful destinations.",
+      "author": "Zig Ziglar",
+      "translated": "Những con đường khó khăn luôn dẫn đến những điểm đến đẹp đẽ."
+    },
+    {
+      "id": 17,
+      "text": "Hustle until you no longer have to introduce yourself.",
+      "author": "Unknown",
+      "translated": "Cố gắng hết mình cho đến khi bạn không cần phải giới thiệu bản thân nữa."
+    },
+    {
+      "id": 18,
+      "text": "You don’t find will power, you create it.",
+      "author": "Unknown",
+      "translated": "Bạn không tìm thấy sức mạnh ý chí, bạn tạo ra nó."
+    },
+    {
+      "id": 19,
+      "text": "Don’t wait for opportunity. Create it.",
+      "author": "Unknown",
+      "translated": "Đừng chờ đợi cơ hội. Hãy tạo ra nó."
+    },
+    {
+      "id": 20,
+      "text": "Be so good they can’t ignore you.",
+      "author": "Steve Martin",
+      "translated": "Hãy giỏi đến mức họ không thể bỏ qua bạn."
+    }
+  ]
+}
